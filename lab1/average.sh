@@ -6,18 +6,18 @@ if  [ $# -eq 0 ]
 then
 	while read LINE
 	do 
-		count=$[count + 1]
-		sum=$[sum + $LINE]
+    let "count = count + 1"
+	let	"sum = sum + $LINE"
 	done
-	av=$[sum / $count]
+    let "av = sum / count"
 	echo "Количество параметров" $count
  	echo "Среднее значение" $av
 else
 	for params in $@
 	do
-		sum=$[sum + $params]
+    let "sum = sum + $params"
 	done
-	av=$[sum / $#]
+    let "av = sum / $#"
 	echo "Количество параметров" $#
  	echo "Среднее значение" $av
 fi
