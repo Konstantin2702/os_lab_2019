@@ -102,7 +102,7 @@ int main(int argc, char **argv)
 
   if (port == -1 || tnum == -1)
   {
-    fprintf(stderr, "Using: %s --port 20001 --tnum 4\n", argv[0]);
+    fprintf(stderr, "Using: %s --port 20001 --tnum 2\n", argv[0]);
     return 1;
   }
 
